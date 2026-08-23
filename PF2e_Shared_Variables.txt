@@ -91,7 +91,8 @@ HTMLFONT = cdt_piercing, Crimson Pro, [text_size], BRD, #734646
 HTMLFONT = cdt_poison, Crimson Pro, [text_size], BRD, #C248E1
 HTMLFONT = cdt_slashing, Crimson Pro, [text_size], BRD, #AE1C1C
 HTMLFONT = cdt_vitality, Crimson Pro, [text_size], BRD, #AE8319
-
+HTMLFONT = cdt_mental, Crimson Pro, [text_size], BRD, #a3386c
+HTMLFONT = cdt_spirit, Crimson Pro, [text_size], BRD, #572649
 
 ; ----------
 ; Lists
