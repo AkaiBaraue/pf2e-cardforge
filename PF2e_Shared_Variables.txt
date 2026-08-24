@@ -91,7 +91,8 @@ HTMLFONT = cdt_piercing, Crimson Pro, [text_size], BRD, #734646
 HTMLFONT = cdt_poison, Crimson Pro, [text_size], BRD, #C248E1
 HTMLFONT = cdt_slashing, Crimson Pro, [text_size], BRD, #AE1C1C
 HTMLFONT = cdt_vitality, Crimson Pro, [text_size], BRD, #AE8319
-
+HTMLFONT = cdt_mental, Crimson Pro, [text_size], BRD, #a3386c
+HTMLFONT = cdt_spirit, Crimson Pro, [text_size], BRD, #572649
 
 ; ----------
 ; Lists
@@ -444,6 +445,7 @@ HTMLKEY = , (it_Spellgu), "Spellgun", bor_trait
 HTMLKEY = , (it_Spellhe), "Spellheart", bor_trait
 HTMLKEY = , (it_Spellsha), "Spellshape", bor_trait
 HTMLKEY = , (it_Spellsho), "Spellshot", bor_trait
+HTMLKEY = , (it_Spirit), "Spirit", bor_trait
 HTMLKEY = , (it_Spla), "Splash", bor_trait
 HTMLKEY = , (it_Staf), "Staff", bor_trait
 HTMLKEY = , (it_Stan), "Stance", bor_trait
@@ -469,6 +471,7 @@ HTMLKEY = , (it_Tear), "Tearing", bor_trait
 HTMLKEY = , (it_Tech), "Tech", bor_trait
 HTMLKEY = , (it_Telepa), "Telepathy", bor_trait
 HTMLKEY = , (it_Telepo), "Teleportation", bor_trait
+HTMLKEY = , (it_Term), "Terminus", bor_trait
 HTMLKEY = , (it_Teth), "Tethered", bor_trait
 HTMLKEY = , (it_Thau), "Thaumaturge", bor_trait
 HTMLKEY = , (it_Thro), "Thrown", bor_trait
@@ -538,3 +541,4 @@ HTMLIMAGE = , (ia_TwoA), "Icons\ia_TWOA.png", ([action_icon_size] * 1.59), [acti
 [p_ch_y] = 0.3%
 [p_ch_width] = 100% - (2 * [p_ch_x])
 [p_ch_height] = 2.7%
+
