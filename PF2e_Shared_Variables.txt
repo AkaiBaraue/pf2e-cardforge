@@ -1,8 +1,14 @@
 UNIT = MM
-; Standard Size
-;CARDSIZE = 65, 91  ; Old MtG size
-CARDSIZE = 63, 92  ; Standard MtG Card size, with a bit more height to fill out the sleeves
-;CARDSIZE = 81, 120  ; Tarot card size
+
+; Standard MtG size
+CARDSIZE = 63, 88
+
+; Standard MtG Card size, with a bit more height to fill out the sleeves
+;CARDSIZE = 63, 92
+
+; Tarot card size
+;CARDSIZE = 81, 120
+
 PAGE = 210, 297, PORTRAIT, HV
 MARGINS = 0, 0, 0, 0
 

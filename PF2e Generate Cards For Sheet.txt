@@ -7,7 +7,7 @@ INCLUDE = "PF2e_Shared_Variables.txt"
 [card_category] = "Simple_Action"
 ;[card_category] = "Skill_vs_Defense"
 ;[card_category] = "Spells"
-;[card_category] = "Item_Consumables"
+;[card_category] = "Item_Other"
 ;[card_category] = "Custom_Cards"
 ;; ==================================================
 
@@ -18,6 +18,11 @@ LINKNEW = <br>
 
 ;; ==================================================
 ;; == Link to the sheet that's being used for the cards
+
+; Only import cards marked for generation
+; Otherwise the script will iterate over a lot of empty entires, wasting time
+LINKFILTER = GENERATECARD = 1
+
 LINK = JOIN("GOOGLE_SHEETS_ID_GOES_HERE", "!", [card_category])
 ;; ==================================================
 
@@ -27,10 +32,10 @@ LINK = JOIN("GOOGLE_SHEETS_ID_GOES_HERE", "!", [card_category])
 
 
 ; Create the front side of the cards
-[cards_to_make_front] = LABELRANGE([GENERATECARD], 1)
+[cards_to_make_front] = 1-{(GENERATECARD)}
 INCLUDE = "PF2e_Positioning_Front.txt"
 INCLUDE = "PF2e_Visual_Front_Common.txt"
-SAVE = [cards_to_make_front], JOIN([card_location], REPLACE([ACTIONNAME], " ", "_"), "_front.png"), 0, 0, 100%, 100%
+SAVE = [cards_to_make_front], JOIN([card_location], REPLACE([CARDNAME], " ", "_"), "_", [CARDNUMBER], "_front.png"), 0, 0, 100%, 100%
 
 
 ;; ==================================================
@@ -41,7 +46,7 @@ SAVE = [cards_to_make_front], JOIN([card_location], REPLACE([ACTIONNAME], " ", "
 ;; == Enable one of these two lines depending whether you want backs
 ;; == without images
 ;INCLUDE = "PF2e_Visual_Back_Common.txt"
-;; == or with images. Note, only the "Item_Consumables" sheet is set up
+;; == or with images. Note, only the "Item_*" sheets are set up
 ;; == to allow for images
 ;;INCLUDE = "PF2e_Visual_Back_Items_with_Image.txt"
 

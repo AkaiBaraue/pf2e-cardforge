@@ -60,7 +60,9 @@ That said, here are some instructions on how to fill in a new card:
     - "Skill_vs_Defense" is for any action/feature where a character rolls a check against a target's defense (fx. _Trip_, _Demoralize_, etc.). This doesn't include spells.
     - "Spells" is for spells.
     - "Simple_Action" is for any action/feature that does not specifically include a check against a defense. This is most class features or feats.
-    - "Item_Consumables" is for consumable items.
+    - "Item_Armor" is for armor items.
+    - "Item_Weapon" is for weapon items.
+    - "Item_Other" is for other types of items (consumable, worn, held, etc.).
     - "Custom_Cards" is for other custom ideas.
 
 2. Go to the sheet and start filling in the information you want on the card. Dark green columns are mandatory while light green columns are optional. For example for _Demoralize_, the "Requirement" column will not be filled in, as _Demoralize_ has no requirements.
