@@ -7,7 +7,7 @@ INCLUDE = "PF2e_Shared_Variables.txt"
 ;; == Unless you use option 3. below.
 ;; == file_name_suffix is appended to the name of the PDF file, useful
 ;; == if creating multiple PDFs from the same category.
-[card_category] = "Item_Consumables"
+[card_category] = "Simple_Action"
 [file_name_suffix] = "TODAY"
 [working_directory] = JOIN([directory_pf2e_cards], "\", [card_category], "\")
 
