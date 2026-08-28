@@ -4,11 +4,13 @@ INCLUDE = "PF2e_Shared_Variables.txt"
 
 ;; ==================================================
 ;; == The sheet name to read data from, also used as the directory to save the images in
-[card_category] = "Simple_Action"
+;[card_category] = "Simple_Action"
 ;[card_category] = "Skill_vs_Defense"
 ;[card_category] = "Spells"
+;[card_category] = "Item_Armor"
+;[card_category] = "Item_Weapon"
 ;[card_category] = "Item_Other"
-;[card_category] = "Custom_Cards"
+[card_category] = "Custom_Cards"
 ;; ==================================================
 
 

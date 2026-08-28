@@ -1,22 +1,36 @@
 UNIT = MM
 
+
+; ==============================
+; Card Dimensions
+; Define the card size you wish, standard is MtG dimensions
+; ==============================
 ; Standard MtG size
 CARDSIZE = 63, 88
-
-; Standard MtG Card size, with a bit more height to fill out the sleeves
-;CARDSIZE = 63, 92
 
 ; Tarot card size
 ;CARDSIZE = 81, 120
 
+
+; ==============================
+; Paper Dimensions
+; Enable either A4 or Letter depending on what you want
+; ==============================
+; A4
 PAGE = 210, 297, PORTRAIT, HV
+
+; Letter
+;PAGE = 216, 279 , PORTRAIT, HV
+
 MARGINS = 0, 0, 0, 0
+
 
 ; ==============================
 ; Directories
 ; ==============================
 
 [directory_pf2e_cards] = "Cards"
+
 
 ; ==============================
 ; Fonts
@@ -59,11 +73,19 @@ HTMLKEY = , "(/act)", "</f_actionName>"
 
 
 ; ----------
-; Break with a bit of line spacing
+; Break with more line spacing
 ; ----------
 HTMLFONT = break, Crimson Pro, [text_size], , #000000, LEFT
 HTMLMARGINS = break, 0, 0, 0, 1.5
 HTMLKEY = , (break), , break
+
+
+; ----------
+; Break with less line spacing
+; ----------
+HTMLFONT = shortbreak, Crimson Pro, [text_size], , #000000, LEFT
+HTMLMARGINS = shortbreak, 0, 0, 0, 0.5
+HTMLKEY = , (shbreak), , shortbreak
 
 
 ; ----------
@@ -81,24 +103,60 @@ HTMLKEY = , "(/u)", "</u>"
 HTMLKEY = , "(s)", "<s>"
 HTMLKEY = , "(/s)", "</s>"
 
+
 ; ----------
 ; Colors
 ; ----------
 ; General highlight
 HTMLFONT= highlight, Crimson Pro, [text_size], BD, #1065ab
+HTMLKEY = , "(highlight)", "<highlight>"
+HTMLKEY = , "(/highlight)", "</highlight>"
 
 ; Damage types
 HTMLFONT = cdt_acid, Crimson Pro, [text_size], BRD, #027702
+HTMLKEY = , "(cdt_acid)", "<cdt_acid>"
+HTMLKEY = , "(/cdt_acid)", "</cdt_acid>"
+
 HTMLFONT = cdt_bludgeoning, Crimson Pro, [text_size], BRD, #827E7E
+HTMLKEY = , "(cdt_bludgeoning)", "<cdt_bludgeoning>"
+HTMLKEY = , "(/cdt_bludgeoning)", "</cdt_bludgeoning>"
+
 HTMLFONT = cdt_cold, Crimson Pro, [text_size], BRD, #0000FF
+HTMLKEY = , "(cdt_cold)", "<cdt_cold>"
+HTMLKEY = , "(/cdt_cold)", "</cdt_cold>"
+
 HTMLFONT = cdt_electricity, Crimson Pro, [text_size], BRD, #1E90FF
+HTMLKEY = , "(cdt_electricity)", "<cdt_electricity>"
+HTMLKEY = , "(/cdt_electricity)", "</cdt_electricity>"
+
 HTMLFONT = cdt_fire, Crimson Pro, [text_size], BRD, #FF4500
+HTMLKEY = , "(cdt_fire)", "<cdt_fire>"
+HTMLKEY = , "(/cdt_fire)", "</cdt_fire>"
+
 HTMLFONT = cdt_piercing, Crimson Pro, [text_size], BRD, #734646
+HTMLKEY = , "(cdt_piercing)", "<cdt_piercing>"
+HTMLKEY = , "(/cdt_piercing)", "</cdt_piercing>"
+
 HTMLFONT = cdt_poison, Crimson Pro, [text_size], BRD, #C248E1
+HTMLKEY = , "(cdt_poison)", "<cdt_poison>"
+HTMLKEY = , "(/cdt_poison)", "</cdt_poison>"
+
 HTMLFONT = cdt_slashing, Crimson Pro, [text_size], BRD, #AE1C1C
+HTMLKEY = , "(cdt_slashing)", "<cdt_slashing>"
+HTMLKEY = , "(/cdt_slashing)", "</cdt_slashing>"
+
 HTMLFONT = cdt_vitality, Crimson Pro, [text_size], BRD, #AE8319
+HTMLKEY = , "(cdt_vitality)", "<cdt_vitality>"
+HTMLKEY = , "(/cdt_vitality)", "</cdt_vitality>"
+
 HTMLFONT = cdt_mental, Crimson Pro, [text_size], BRD, #a3386c
+HTMLKEY = , "(cdt_mental)", "<cdt_mental>"
+HTMLKEY = , "(/cdt_mental)", "</cdt_mental>"
+
 HTMLFONT = cdt_spirit, Crimson Pro, [text_size], BRD, #572649
+HTMLKEY = , "(cdt_spirit)", "<cdt_spirit>"
+HTMLKEY = , "(/cdt_spirit)", "</cdt_spirit>"
+
 
 ; ----------
 ; Lists
@@ -122,9 +180,20 @@ HTMLKEY = , "(/def)", "</f_defense>"
 ; Degrees of Success colors
 ; ----------
 HTMLFONT = f_critSucc, Crimson Pro, [text_size], BD, #2f67b1
+HTMLKEY = , "(f_critSucc)", "<f_critSucc>"
+HTMLKEY = , "(/f_critSucc)", "</f_critSucc>"
+
 HTMLFONT = f_succ, Crimson Pro, [text_size], BD, #4393fd
+HTMLKEY = , "(f_succ)", "<f_succ>"
+HTMLKEY = , "(/f_succ)", "</f_succ>"
+
 HTMLFONT = f_fail, Crimson Pro, [text_size], BD, #e5342a
+HTMLKEY = , "(f_fail)", "<f_fail>"
+HTMLKEY = , "(/f_fail)", "</f_fail>"
+
 HTMLFONT = f_critFail, Crimson Pro, [text_size], BD, #bf2c23
+HTMLKEY = , "(f_critFail)", "<f_critFail>"
+HTMLKEY = , "(/f_critFail)", "</f_critFail>"
 
 
 ; ==============================
@@ -196,6 +265,8 @@ HTMLKEY = , (it_Arda), "Ardande", bor_trait
 HTMLKEY = , (it_Arti), "Artifact", bor_trait
 HTMLKEY = , (it_Atha), "Athamaru", bor_trait
 HTMLKEY = , (it_Attach), "Attached", bor_trait
+HTMLKEY = , (it_AttaCF), "Attached (Crossbow or Firearm)", bor_trait
+HTMLKEY = , (it_AttaShi), "Attached (Shield)", bor_trait
 HTMLKEY = , (it_Attack), "Attack", bor_trait_important
 HTMLKEY = , (it_Audi), "Auditory", bor_trait
 HTMLKEY = , (it_Aura), "Aura", bor_trait
@@ -216,6 +287,10 @@ HTMLKEY = , (it_Bulw), "Bulwark", bor_trait
 HTMLKEY = , (it_Call), "Calling", bor_trait
 HTMLKEY = , (it_Cant), "Cantrip", bor_trait
 HTMLKEY = , (it_Capa), "Capacity", bor_trait
+HTMLKEY = , (it_Capa2), "Capacity 2", bor_trait
+HTMLKEY = , (it_Capa3), "Capacity 3", bor_trait
+HTMLKEY = , (it_Capa4), "Capacity 4", bor_trait
+HTMLKEY = , (it_Capa5), "Capacity 5", bor_trait
 HTMLKEY = , (it_Cata), "Catalyst", bor_trait
 HTMLKEY = , (it_Cens), "Censer", bor_trait
 HTMLKEY = , (it_Cent), "Centaur", bor_trait
@@ -252,6 +327,11 @@ HTMLKEY = , (it_Curseb), "Cursebound", bor_trait
 HTMLKEY = , (it_Cursed), "Cursed", bor_trait
 HTMLKEY = , (it_Dark), "Darkness", bor_trait
 HTMLKEY = , (it_Dead), "Deadly", bor_trait
+HTMLKEY = , (it_DeadD10), "Deadly d10", bor_trait
+HTMLKEY = , (it_DeadD12), "Deadly d12", bor_trait
+HTMLKEY = , (it_DeadD4), "Deadly d4", bor_trait
+HTMLKEY = , (it_DeadD6), "Deadly d6", bor_trait
+HTMLKEY = , (it_DeadD8), "Deadly d8", bor_trait
 HTMLKEY = , (it_Deat), "Death", bor_trait
 HTMLKEY = , (it_Dedi), "Dedication", bor_trait
 HTMLKEY = , (it_Defl), "Deflecting", bor_trait
@@ -285,7 +365,12 @@ HTMLKEY = , (it_Expa), "Expandable", bor_trait
 HTMLKEY = , (it_Expl), "Exploration", bor_trait
 HTMLKEY = , (it_Extr), "Extradimensional", bor_trait
 HTMLKEY = , (it_Fatal), "Fatal", bor_trait
-HTMLKEY = , (it_Fata), "Fatal Aim", bor_trait
+HTMLKEY = , (it_FataA), "Fatal Aim", bor_trait
+HTMLKEY = , (it_FataAD10), "Fatal Aim d10", bor_trait
+HTMLKEY = , (it_FataAD12), "Fatal Aim d12", bor_trait
+HTMLKEY = , (it_FataD10), "Fatal d10", bor_trait
+HTMLKEY = , (it_FataD12), "Fatal d12", bor_trait
+HTMLKEY = , (it_FataD8), "Fatal d8", bor_trait
 HTMLKEY = , (it_Fear), "Fear", bor_trait
 HTMLKEY = , (it_Fetc), "Fetchling", bor_trait
 HTMLKEY = , (it_Figh), "Fighter", bor_trait
@@ -346,6 +431,7 @@ HTMLKEY = , (it_Inven), "Inventor", bor_trait
 HTMLKEY = , (it_Inves), "Invested", bor_trait
 HTMLKEY = , (it_Investi), "Investigator", bor_trait
 HTMLKEY = , (it_Jous), "Jousting", bor_trait
+HTMLKEY = , (it_JousD6), "Jousting d6", bor_trait
 HTMLKEY = , (it_Kash), "Kashrishi", bor_trait
 HTMLKEY = , (it_Khol), "Kholo", bor_trait
 HTMLKEY = , (it_Kick), "Kickback", bor_trait
@@ -375,6 +461,7 @@ HTMLKEY = , (it_Misf), "Misfortune", bor_trait
 HTMLKEY = , (it_Miss), "Missive", bor_trait
 HTMLKEY = , (it_Modi), "Modification", bor_trait
 HTMLKEY = , (it_Modu), "Modular", bor_trait
+HTMLKEY = , (it_ModuBPS), "Modular (B, P, or S)", bor_trait
 HTMLKEY = , (it_Monk), "Monk", bor_trait
 HTMLKEY = , (it_Morp), "Morph", bor_trait
 HTMLKEY = , (it_Moun), "Mounted", bor_trait
@@ -425,6 +512,7 @@ HTMLKEY = , (it_Refl), "Reflection", bor_trait
 HTMLKEY = , (it_Rein), "Reincarnated", bor_trait
 HTMLKEY = , (it_Reli), "Relic", bor_trait
 HTMLKEY = , (it_Relo), "Reload", bor_trait
+HTMLKEY = , (it_Relo1), "Reload 1", bor_trait
 HTMLKEY = , (it_Repe), "Repeating", bor_trait
 HTMLKEY = , (it_Reso), "Resonant", bor_trait
 HTMLKEY = , (it_Reve), "Revelation", bor_trait
@@ -434,6 +522,8 @@ HTMLKEY = , (it_Sams), "Samsaran", bor_trait
 HTMLKEY = , (it_Sanc), "Sanctified", bor_trait
 HTMLKEY = , (it_Sara), "Sarangay", bor_trait
 HTMLKEY = , (it_Scat), "Scatter", bor_trait
+HTMLKEY = , (it_Scat10), "Scatter 10'", bor_trait
+HTMLKEY = , (it_Scat5), "Scatter 5'", bor_trait
 HTMLKEY = , (it_Scro), "Scroll", bor_trait
 HTMLKEY = , (it_Scry), "Scrying", bor_trait
 HTMLKEY = , (it_Secr), "Secret", bor_trait
@@ -481,6 +571,11 @@ HTMLKEY = , (it_Term), "Terminus", bor_trait
 HTMLKEY = , (it_Teth), "Tethered", bor_trait
 HTMLKEY = , (it_Thau), "Thaumaturge", bor_trait
 HTMLKEY = , (it_Thro), "Thrown", bor_trait
+HTMLKEY = , (it_Thro10), "Thrown 10'", bor_trait
+HTMLKEY = , (it_Thro20), "Thrown 20'", bor_trait
+HTMLKEY = , (it_Thro30), "Thrown 30'", bor_trait
+HTMLKEY = , (it_Thro40), "Thrown 40'", bor_trait
+HTMLKEY = , (it_Thro50), "Thrown 50'", bor_trait
 HTMLKEY = , (it_Tief), "Tiefling", bor_trait
 HTMLKEY = , (it_Trai), "Training", bor_trait
 HTMLKEY = , (it_Transc), "Transcendence", bor_trait
@@ -491,6 +586,9 @@ HTMLKEY = , (it_Trip), "Trip", bor_trait
 HTMLKEY = , (it_Tripke), "Tripkee", bor_trait
 HTMLKEY = , (it_Twin), "Twin", bor_trait
 HTMLKEY = , (it_Two-), "Two-Hand", bor_trait
+HTMLKEY = , (it_TwoD10), "Two-Hand d10", bor_trait
+HTMLKEY = , (it_TwoD12), "Two-Hand d12", bor_trait
+HTMLKEY = , (it_TwoD8), "Two-Hand d8", bor_trait
 HTMLKEY = , (it_Unar), "Unarmed", bor_trait
 HTMLKEY = , (it_Unco), "Uncommon", bor_trait
 HTMLKEY = , (it_Undi), "Undine", bor_trait
@@ -502,6 +600,9 @@ HTMLKEY = , (it_Vana), "Vanara", bor_trait
 HTMLKEY = , (it_Vehi), "Vehicular", bor_trait
 HTMLKEY = , (it_Veno), "Venomous", bor_trait
 HTMLKEY = , (it_Vers), "Versatile", bor_trait
+HTMLKEY = , (it_VersB), "Versatile B", bor_trait
+HTMLKEY = , (it_VersP), "Versatile P", bor_trait
+HTMLKEY = , (it_VersS), "Versatile S", bor_trait
 HTMLKEY = , (it_Vigi), "Vigilante", bor_trait
 HTMLKEY = , (it_Viru), "Virulent", bor_trait
 HTMLKEY = , (it_Vish), "Vishkanya", bor_trait
@@ -510,6 +611,8 @@ HTMLKEY = , (it_Vita), "Vitality", bor_trait
 HTMLKEY = , (it_Voca), "Vocal", bor_trait
 HTMLKEY = , (it_Void), "Void", bor_trait
 HTMLKEY = , (it_Voll), "Volley", bor_trait
+HTMLKEY = , (it_Voll30), "Volley 30'", bor_trait
+HTMLKEY = , (it_Voll50), "Volley 50'", bor_trait
 HTMLKEY = , (it_Wand), "Wand", bor_trait
 HTMLKEY = , (it_Wander), "Wandering", bor_trait
 HTMLKEY = , (it_Wate), "Water", bor_trait

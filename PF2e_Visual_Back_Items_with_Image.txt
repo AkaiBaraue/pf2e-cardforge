@@ -18,7 +18,7 @@ HTMLTEXT = [cards_to_make_back], [ACTIONNAME], [p_margin_left], [pb_an_y], [p_wi
 HTMLTEXT = [cards_to_make_back], [ACTIONICON], [p_margin_left], [pb_ai_y], [p_width], [pb_ai_height], #FFFFFF, 0, EBJM, 100, f_center_b
 
 ; Action Level
-HTMLTEXT = [cards_to_make_back], [ACTIONLEVEL], [p_margin_left], [pb_al_y], [p_width], [pb_al_height], #FFFFFF, 0, EBFM, 100, f_center_b
+HTMLTEXT = [cards_to_make_back], [CARDLEVEL], [p_margin_left], [pb_al_y], [p_width], [pb_al_height], #FFFFFF, 0, EBFM, 100, f_center_b
 
 ; Item Image
 [pb_iimage_width] = 40%

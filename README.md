@@ -23,13 +23,13 @@
    Once you have the .ttf file, double-click it to open it, then click the "Install" button. I also save them into the "Font" folder just in case I need them again later, but that is not a necessary step.
 
 3. **Download Nandeck**  
-   Download from [https://www.nandeck.com](https://www.nandeck.com). NOTE: As of writing this, the latest version `1.28.2` contains a bug that means text doesn't scale properly, causing cards to have a lot of empty space. It is confirmed that version `1.28.3.beta3` contains a fix for this issue, but you will need to go to the Discord to find a link to that version.
+   Download from [https://www.nandeck.com](https://www.nandeck.com). NOTE: As of writing this, the latest version `1.29.1` contains a bug that means text doesn't scale properly, causing cards to have a lot of empty space. It is confirmed that version `1.28.3.beta24` contains a fix for this issue, but you will need to go to the Discord to find a link to that version.
 
-   In order to verify that you have a version that fixes the issue, launch Nandeck and click "Open deck", then open the `Test_DynamicBoxLayout.txt` file. Click "Validate deck" and then "Build deck". If the result is similar to the first image below, all is good. If it is similar to the second image, you need to find a different version.
+   In order to verify that you have a version that fixes the issue, launch Nandeck and click "Open deck", then open the `Test_DynamicBoxLayout.txt` file. Click "Validate deck" and then "Build deck". If the result is similar to the first image below, all is good. If it is similar to the second or third image, you need to find a different version.
 
-   |       |       |
-   | ----- | ----- |
-   | <img src="assets/verify_nandeck_version/proper_result.png" style="width:300; height:auto;"> | <img src="assets/verify_nandeck_version/incorrect_result.png" style="width:300; height:auto;"> |
+   |       |       |       |
+   | ----- | ----- | ----- |
+   | <img src="assets/verify_nandeck_version/proper_result.png" style="width:300; height:auto;"> | <img src="assets/verify_nandeck_version/incorrect_result_too_squished.png" style="width:300; height:auto;"> | <img src="assets/verify_nandeck_version/incorrect_result_not_squished_enough.png" style="width:300; height:auto;"> |
    
 
 4. **Copy the Google Sheets Template**  
@@ -95,6 +95,13 @@ Using the script as is, only images for the front side of the cards will be crea
 
 By default, the script will take all images in the given `[card_category]` folder and create a single PDF with all of them. If you only want certain cards (or want cards from multiple different folders), see the examples on line 26 to 50 of the script on how to accomplish that.
 
+
+
+
+
+## Creating the Physical Cards (Optional)
+
+TODO
 
 
 
