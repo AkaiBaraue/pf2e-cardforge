@@ -3,7 +3,7 @@
 ; ==============================
 
 ; Card Template
-IMAGE = [cards_to_make_back], [CARDTEMPLATEFILE], 0%, 0%, 100%, 100%, 0, T
+IMAGE = [cards_to_make_back], [CARDTEMPLATEFILE], 0%, 0%, 100%, 100%, 0
 
 ; Card Header
 HTMLTEXT = [cards_to_make_back], [CARDHEADER], [p_ch_x], [p_ch_y], [p_ch_width], [p_ch_height], #FFFFFF, 0, EBFM, 100, f_header

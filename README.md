@@ -4,9 +4,9 @@
 
 |       |       |       |
 | ----- | ----- | ----- |
-| <img src="assets/card_examples/Demoralize_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Feint_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Trip_front.png" style="width:300; height:auto;"> |
-| <img src="assets/card_examples/Alchemist&apos;s_Fire_(Lesser)_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Alcohol_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Heal_front.png" style="width:300; height:auto;"> |
-| <img src="assets/card_examples/Elemental_Blast_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Intimidating_Strike_front.png" style="width:300; height:auto;"> | <img src="assets/card_examples/Vitality_Lash_front.png" style="width:300; height:auto;"> |
+| <img src="documentation/card_examples/Demoralize_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Feint_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Trip_front.png" style="width:300; height:auto;"> |
+| <img src="documentation/card_examples/Alchemist&apos;s_Fire_(Lesser)_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Alcohol_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Heal_front.png" style="width:300; height:auto;"> |
+| <img src="documentation/card_examples/Elemental_Blast_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Intimidating_Strike_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Vitality_Lash_front.png" style="width:300; height:auto;"> |
 
 
 ## Installation/Setup
@@ -29,7 +29,7 @@
 
    |       |       |       |
    | ----- | ----- | ----- |
-   | <img src="assets/verify_nandeck_version/proper_result.png" style="width:300; height:auto;"> | <img src="assets/verify_nandeck_version/incorrect_result_too_squished.png" style="width:300; height:auto;"> | <img src="assets/verify_nandeck_version/incorrect_result_not_squished_enough.png" style="width:300; height:auto;"> |
+   | <img src="documentation/verify_nandeck_version/proper_result.png" style="width:300; height:420;"> | <img src="documentation/verify_nandeck_version/incorrect_result_too_squished.png" style="width:300; height:420;"> | <img src="documentation/verify_nandeck_version/incorrect_result_not_squished_enough.png" style="width:300; height:420;"> |
    
 
 4. **Copy the Google Sheets Template**  
@@ -78,9 +78,7 @@ You can add more custom formatting in the different columns such as making text 
 2. Verify that the `LINK = JOIN(` command references your copy of the "Nandeck PF2e Card Data" Google Sheets, which you created in step 4 of Installation.
 3. Set `[card_category]` to the sheet tab you want to create cards from.
 4. Click the "Validate deck" button. If the terminal below does not say "Deck valid", you will have to figure out what the error is and fix it. Otherwise all is good and you can click "Build deck".
-5. The script will now start creating all the cards that have been flagged as "Enable" in the Google Sheet. They will be saved in the `Cards/` directory. It might look like Nandeck is attempting to create around 200 cards, that is because even empty rows are considered a card due to the formatting forumlas that have been used in the sheets. Just ignore that. Nandeck will make only create the Enabled cards.
-    
-   Note that each card may take a while to create, as there's a lot of calculations of text size going on in the background. On my machine, it is around 6 seconds per card.
+5. The script will now start creating all the cards that have been flagged as "Enable" in the Google Sheet. They will be saved in the `Cards/` directory. Note that each card may take a while to create, as there's a lot of calculations of text size going on in the background. On my machine, it is around 6 seconds per card.
 
 Using the script as is, only images for the front side of the cards will be created. There are commands at the bottom of the script that cna be enabled to also create the backs of the cards, which you can enable if you want.
 
@@ -88,7 +86,7 @@ Using the script as is, only images for the front side of the cards will be crea
 ### Create PDFs
 
 1. In Nandeck, open the `PF2e Create PDF.txt` file.
-2. Set `[card_category]` to folder you want to pull the images from (the same name as the sheet in Google Sheets).
+2. Set `[card_category]` to folder you want to pull the images from (the same name as the sheet in Google Sheets). You can also create a new folder and copy all the cards you want to print into that one, if you're creating cards for multiple categories at the same time.
 3. Set `[file_name_suffix]` to whatever you want. This value is added to the end of the PDF name. It can be changed between runs to avoid overwriting existing PDF files.
 4. Determine if you want the PDF to be created as duplex (printing on front and back of the paper) or not. This is only relevant if you have created both fronts and backs of cards. If yes, enable line 83-85 and outcomment line 88. If no, leave it as is.
 5. Click the "Validate deck". If the terminal below does not say "Deck valid", you will have to figure out what the error is and fix it. Otherwise all is good and you can click "Build deck".
@@ -98,23 +96,22 @@ By default, the script will take all images in the given `[card_category]` folde
 
 
 
-
 ## Creating the Physical Cards (Optional)
 
-TODO
+See [CREATING_THE_PHYSICAL_CARDS.md](documentation/CREATING_THE_PHYSICAL_CARDS.md)
 
 
 
 ## Modifying the Scripts (Optional)
 
-See [MODIFYING_THE_SCRIPTS.md](./MODIFYING_THE_SCRIPTS.md)
+See [MODIFYING_THE_SCRIPTS.md](documentation/MODIFYING_THE_SCRIPTS.md)
 
 
 
 
 ## Creating a new Template (Optional)
 
-See [CREATING_A_NEW_TEMPLATE.md](./CREATING_A_NEW_TEMPLATE.md)
+See [CREATING_A_NEW_TEMPLATE.md](documentation/CREATING_A_NEW_TEMPLATE.md)
 
 
 
