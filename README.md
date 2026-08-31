@@ -1,15 +1,17 @@
 # pf2e-cardforge
 
-**pf2e-cardforge** is a set of scripts and templates for generating PF2e reference cards using [Nandeck](https://www.nandeck.com) and Google Sheets. The reference cards are designed to streamline prep and gameplay with layouts that are quick to parse and can be created for spells, feats, items, and more.
+**pf2e-cardforge** is a set of scripts and templates for generating PF2e reference cards using [Nandeck](https://www.nandeck.com) and Google Sheets. The reference cards are designed to help reference information during play and can be created for spells, feats, items, and more.
 
 |       |       |       |
 | ----- | ----- | ----- |
-| <img src="documentation/card_examples/Demoralize_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Feint_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Trip_front.png" style="width:300; height:auto;"> |
-| <img src="documentation/card_examples/Alchemist&apos;s_Fire_(Lesser)_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Alcohol_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Heal_front.png" style="width:300; height:auto;"> |
-| <img src="documentation/card_examples/Elemental_Blast_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Intimidating_Strike_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Vitality_Lash_front.png" style="width:300; height:auto;"> |
+| <img src="documentation/card_examples/Disarm_8_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Elemental_Blast_10_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Heal_4_front.png" style="width:300; height:auto;"> |
+| <img src="documentation/card_examples/Intimidating_Strike_1_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Pendant_of_the_Occult_(Greater)_14_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Staves_4_front.png" style="width:300; height:auto;"> |
+| <img src="documentation/card_examples/Treat_Wounds_13_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Trip_2_front.png" style="width:300; height:auto;"> | <img src="documentation/card_examples/Vitality_Lash_8_front.png" style="width:300; height:auto;"> |
 
 
-## Installation/Setup
+
+
+# Installation/Setup
 
 1. **Clone/download this Repo**
 
@@ -43,50 +45,54 @@ Everything should now be ready for you to start creating cards.
 
 
 
-## Usage Instructions
+# Usage Instructions
 
 Creating a new card and readying it for print is a 3-step process: You need to add the card data to the google sheet, then create the card images using the provided scripts, and finally create a PDF from the card images. Each step is explained below.
 
-Note: The first time you validate the scripts, you might be asked to enabled IE11. Accept, as otherwise the script won't work.
+Note: The first time you validate the scripts, you might be asked to enabled IE11. Accept and restart the application, as otherwise the script won't work.
 
 
-### Add Card Data to Google Sheet
+## Add Card Data to Google Sheet
 
 The Google Sheet you have created a copy of comes with a lot of examples already, which should help you figure out what to do. You can do whatever you want with the examples, but if you want to keep them for reference without creating cards for them, simply make sure the "Enable" column isn't ticked. There is also a README sheet, which explains the basics of the sheet.
 
 That said, here are some instructions on how to fill in a new card:
 
 1. Figure out what you want to create a card for and figure out which sheet the feature/spell/item belongs to:
-    - "Skill_vs_Defense" is for any action/feature where a character rolls a check against a target's defense (fx. _Trip_, _Demoralize_, etc.). This doesn't include spells.
-    - "Spells" is for spells.
-    - "Simple_Action" is for any action/feature that does not specifically include a check against a defense. This is most class features or feats.
-    - "Item_Armor" is for armor items.
-    - "Item_Weapon" is for weapon items.
-    - "Item_Other" is for other types of items (consumable, worn, held, etc.).
-    - "Custom_Cards" is for other custom ideas.
+   - "Skill_vs_Defense" is for any action/feature where a character rolls a check against a target's defense (fx. _Trip_, _Demoralize_, etc.). This doesn't include spells.
+   - "Spells" is for spells.
+   - "Simple_Action" is for any action/feature that does not specifically include a check against a defense. This is most class features or feats.
+   - "Item_Armor" is for armor items.
+   - "Item_Weapon" is for weapon items.
+   - "Item_Other" is for other types of items (consumable, worn, held, etc.).
+   - "Custom_Cards" is for other custom ideas.
 
-2. Go to the sheet and start filling in the information you want on the card. Dark green columns are mandatory while light green columns are optional. For example for _Demoralize_, the "Requirement" column will not be filled in, as _Demoralize_ has no requirements.
+2. Go to the sheet and start filling in the information you want on the card. Dark green columns are mandatory (though after the "Traits" column it is more "highly recommended") while light green columns are optional. For example for _Demoralize_, the "Requirement" column will not be filled in, as _Demoralize_ has no requirements.
 
-    The sheets are set up to allow for easy data inputting, and will handle the formatting that is common across all cards of the same type. For example, filling data into a row in "Simple_Action" will handle formatting the degrees of success correctly.
+   - The sheets are set up to allow for easy data inputting, and will handle the formatting that is common across all cards of the same type. For example, filling data into a row in "Simple_Action" will handle formatting the degrees of success correctly.
+   - You can add as much text as you wish to any column. The Nandeck scripts will scale text in an attempt to fit all of it on a card, but too much text will cause the text to become so small it's barely readable. As a rule-of-thumb, if text on the card is smaller than the text of the traits, it is too small.
 
 You can add more custom formatting in the different columns such as making text **bold**, _italic_, etc. The instructions are included in the README sheet.
 
 
-### Create Card Images
+## Create Card Images
 
-1. Launch Nandeck, click "Open deck", and then select the `PF2e Generate Cards For Sheet.txt` file. Nandeck will remember which "decks" you have opened, so this step should not be necessary in the future.
+By default the script will create cards with the size of a standard Magic the Gathering card (63 x 88) and create PDFs in A4 format. If you wish to change this, open the `PF2e_Shared_Variables.txt` file and change the `CARDSIZE` and `PAGE` parameters.
+
+1. Launch Nandeck, click "Open deck", and then select the `PF2e Generate Cards For Sheet.txt` file. Nandeck should remember which "decks" you have opened, so this step should not be necessary in the future.
 2. Verify that the `LINK = JOIN(` command references your copy of the "Nandeck PF2e Card Data" Google Sheets, which you created in step 4 of Installation.
 3. Set `[card_category]` to the sheet tab you want to create cards from.
 4. Click the "Validate deck" button. If the terminal below does not say "Deck valid", you will have to figure out what the error is and fix it. Otherwise all is good and you can click "Build deck".
 5. The script will now start creating all the cards that have been flagged as "Enable" in the Google Sheet. They will be saved in the `Cards/` directory. Note that each card may take a while to create, as there's a lot of calculations of text size going on in the background. On my machine, it is around 6 seconds per card.
+6. Visually inspect the cards you've created. Sometimes custom formatting hasn't worked quite as intended, or there is so much text on the card that it's been scaled down to unreadable levels.
 
-Using the script as is, only images for the front side of the cards will be created. There are commands at the bottom of the script that cna be enabled to also create the backs of the cards, which you can enable if you want.
+Using the script as is, only images for the front side of the cards will be created. There are commands at the bottom of the script that can be enabled to also create the backs of the cards. I don't use them because 1) I put the card in sleeves with colored backs, and 2) lining up backs and fronts when printing is a pain to get right
 
 
-### Create PDFs
+## Create PDFs
 
 1. In Nandeck, open the `PF2e Create PDF.txt` file.
-2. Set `[card_category]` to folder you want to pull the images from (the same name as the sheet in Google Sheets). You can also create a new folder and copy all the cards you want to print into that one, if you're creating cards for multiple categories at the same time.
+2. Set `[card_category]` to folder you want to pull the images from (the same name as the sheet in Google Sheets). You can also create a new folder and copy all the cards you want to print into that one, if you're creating cards for multiple categories at the same time. I find this to be easier sometimes.
 3. Set `[file_name_suffix]` to whatever you want. This value is added to the end of the PDF name. It can be changed between runs to avoid overwriting existing PDF files.
 4. Determine if you want the PDF to be created as duplex (printing on front and back of the paper) or not. This is only relevant if you have created both fronts and backs of cards. If yes, enable line 83-85 and outcomment line 88. If no, leave it as is.
 5. Click the "Validate deck". If the terminal below does not say "Deck valid", you will have to figure out what the error is and fix it. Otherwise all is good and you can click "Build deck".
@@ -96,27 +102,28 @@ By default, the script will take all images in the given `[card_category]` folde
 
 
 
-## Creating the Physical Cards (Optional)
+# Creating the Physical Cards
 
 See [CREATING_THE_PHYSICAL_CARDS.md](documentation/CREATING_THE_PHYSICAL_CARDS.md)
 
 
 
-## Modifying the Scripts (Optional)
+
+# Modifying the Scripts (Optional)
 
 See [MODIFYING_THE_SCRIPTS.md](documentation/MODIFYING_THE_SCRIPTS.md)
 
 
 
 
-## Creating a new Template (Optional)
+# Creating a new Template (Optional)
 
 See [CREATING_A_NEW_TEMPLATE.md](documentation/CREATING_A_NEW_TEMPLATE.md)
 
 
 
 
-## Contributing
+# Contributing
 
 If you have improvements for layout, new types of cards, or whatever else, feel free to fork the project and submit a PR.
 
@@ -125,7 +132,7 @@ Please make sure any contributions respect the open-source license and avoid inc
 
 
 
-## Licenses
+# Licenses
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and redistribute this code as you like, with attribution.
 

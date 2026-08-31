@@ -223,16 +223,32 @@ HTMLBORDER  = box_dotted, DOTTED, #000000, [box_thickness], [box_gap_top], [box_
 
 
 ; ==============================
-; "Icons"
+; Traits
 ; ==============================
 [traits_text_size] = 8
+
+; Standard Traits format
 HTMLFONT        = bor_trait, Arial, [traits_text_size], B, #FFFFFF
 HTMLMARGINS     = bor_trait, 0, 0, 0, 0, , 170
 HTMLBORDER      = bor_trait, RECTANGLE, #D5C489, 0.03, 0.3, 0.8, 0.8, 0.3, 0, #531004
 
+HTMLFONT        = bor_trait_uncommon, Arial, [traits_text_size], B, #FFFFFF
+HTMLMARGINS     = bor_trait_uncommon, 0, 0, 0, 0, , 170
+HTMLBORDER      = bor_trait_uncommon, RECTANGLE, #D5C489, 0.03, 0.3, 0.8, 0.8, 0.3, 0, #98503c
+
+HTMLFONT        = bor_trait_rare, Arial, [traits_text_size], B, #FFFFFF
+HTMLMARGINS     = bor_trait_rare, 0, 0, 0, 0, , 170
+HTMLBORDER      = bor_trait_rare, RECTANGLE, #D5C489, 0.03, 0.3, 0.8, 0.8, 0.3, 0, #002564
+
+HTMLFONT        = bor_trait_unique, Arial, [traits_text_size], B, #FFFFFF
+HTMLMARGINS     = bor_trait_unique, 0, 0, 0, 0, , 170
+HTMLBORDER      = bor_trait_unique, RECTANGLE, #D5C489, 0.03, 0.3, 0.8, 0.8, 0.3, 0, #800080
+
+; Traits you want to highlight. Change the background color if you wish, but use a dark color as the text is white
 HTMLFONT        = bor_trait_important, Arial, [traits_text_size], B, #FFFFFF
 HTMLMARGINS     = bor_trait_important, 0, 0, 0, 0, , 170
 HTMLBORDER      = bor_trait_important, RECTANGLE, #D5C489, 0.03, 0.3, 0.8, 0.8, 0.3, 0, #531004
+;HTMLBORDER      = bor_trait_important, RECTANGLE, #D5C489, 0.03, 0.3, 0.8, 0.8, 0.3, 0, #0a6f16
 
 HTMLFONT        = f_traits, Arial, [traits_text_size], , #000000, CENTER
 HTMLMARGINS     = f_traits, 0, 0, 0, 0, CENTER
@@ -503,7 +519,7 @@ HTMLKEY = , (it_Rage), "Rage", bor_trait
 HTMLKEY = , (it_Range), "Range", bor_trait
 HTMLKEY = , (it_Ranged), "Ranged", bor_trait
 HTMLKEY = , (it_Ranger), "Ranger", bor_trait
-HTMLKEY = , (it_Rare), "Rare", bor_trait
+HTMLKEY = , (it_Rare), "Rare", bor_trait_rare
 HTMLKEY = , (it_Razi), "Razing", bor_trait
 HTMLKEY = , (it_Reac), "Reach", bor_trait
 HTMLKEY = , (it_Reck), "Reckless", bor_trait
@@ -590,10 +606,10 @@ HTMLKEY = , (it_TwoD10), "Two-Hand d10", bor_trait
 HTMLKEY = , (it_TwoD12), "Two-Hand d12", bor_trait
 HTMLKEY = , (it_TwoD8), "Two-Hand d8", bor_trait
 HTMLKEY = , (it_Unar), "Unarmed", bor_trait
-HTMLKEY = , (it_Unco), "Uncommon", bor_trait
+HTMLKEY = , (it_Unco), "Uncommon", bor_trait_uncommon
 HTMLKEY = , (it_Undi), "Undine", bor_trait
 HTMLKEY = , (it_Unho), "Unholy", bor_trait
-HTMLKEY = , (it_Uniq), "Unique", bor_trait
+HTMLKEY = , (it_Uniq), "Unique", bor_trait_unique
 HTMLKEY = , (it_Univ), "Universal", bor_trait
 HTMLKEY = , (it_Unst), "Unstable", bor_trait
 HTMLKEY = , (it_Vana), "Vanara", bor_trait
@@ -622,6 +638,11 @@ HTMLKEY = , (it_Wiza), "Wizard", bor_trait
 HTMLKEY = , (it_Wood), "Wood", bor_trait
 HTMLKEY = , (it_Yaks), "Yaksha", bor_trait
 HTMLKEY = , (it_Yaog), "Yaoguai", bor_trait
+
+
+; ==============================
+; Icons
+; ==============================
 
 ; Actions
 [action_icon_size] = ((([text_size] - 1) / 72) * 2.56) * 10
