@@ -7,7 +7,7 @@ INCLUDE = "PF2e_Shared_Variables.txt"
 ;; == Unless you use option 3. below.
 ;; == file_name_suffix is appended to the name of the PDF file, useful
 ;; == if creating multiple PDFs from the same category.
-[card_category] = "Simple_Action"
+[card_category] = "Cards_to_Print"
 [file_name_suffix] = "TODAY"
 [working_directory] = JOIN([directory_pf2e_cards], "\", [card_category], "\")
 
@@ -57,7 +57,10 @@ INCLUDE = "PF2e_Shared_Variables.txt"
 
 
 ;; Sets the bleed markers on the page
-BORDER = RECTANGLE, #000000, 0.5, MARKDOT
+;; If you want to have a bit of border around each card, increase "0.0" a tiny bit,
+;; for example to 0.5. I've left it at 0.0 because that fits with the equipment I'm
+;; using to cut the cards
+BORDER = RECTANGLE, #000000, 0.0, MARKDOT
 
 
 ;; ============================================================

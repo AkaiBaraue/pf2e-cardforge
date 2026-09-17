@@ -25,7 +25,7 @@
    Once you have the .ttf file, double-click it to open it, then click the "Install" button. I also save them into the "Font" folder just in case I need them again later, but that is not a necessary step.
 
 3. **Download Nandeck**  
-   Download from [https://www.nandeck.com](https://www.nandeck.com). NOTE: As of writing this, the latest version `1.29.1` contains a bug that means text doesn't scale properly, causing cards to have a lot of empty space. It is confirmed that version `1.28.3.beta24` contains a fix for this issue, but you will need to go to the Discord to find a link to that version.
+   Download from [https://www.nandeck.com](https://www.nandeck.com). NOTE: As of writing this, the latest version `1.29.1` contains a bug that means text doesn't scale properly, causing cards to have a lot of empty space. It is confirmed that version `1.29.1.beta18` contains a fix for this issue. You can find it on the official Nandeck Discord (which you can find a link to [here](https://nandeck.com/archives/247)) under `#general` and then the `Pathfinder cards` thread.
 
    In order to verify that you have a version that fixes the issue, launch Nandeck and click "Open deck", then open the `Test_DynamicBoxLayout.txt` file. Click "Validate deck" and then "Build deck". If the result is similar to the first image below, all is good. If it is similar to the second or third image, you need to find a different version.
 
